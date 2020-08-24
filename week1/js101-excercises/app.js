@@ -81,6 +81,84 @@
 
 // calculateNum(232);
 
-encodeCipher = () => {
+
+
+
+
+// cipher = (message,key) => {
+//     const lowerMessage = message.toLowerCase();
+//     let encodeString = "";
     
+//     for(i = 0;i < lowerMessage.length;i++) {
+//         let char = lowerMessage.charCodeAt(i);
+
+//     //need to make sure char is between 97 and 122
+//     if (char >= 97 && char <= 97 + 25) 
+//     {   
+        
+//         char -= 97;
+//         char = mod(char + key,26);
+//         char += 97
+//     }
+//     encodeString += String.fromCharCode(char);
+
+// }
+// console.log(encodeString);
+//     }
+
+
+
+// mod = (n, p) =>
+// {
+//     return n - p * Math.floor( n / p );
+// }
+
+// leetSpeak = (newString) => 
+// {
+//     let alphas = {
+//     A: 4,
+//     E: 3,
+//     G: 6,
+//     L: 1,
+//     O: 0,
+//     S: 5,
+//     T: 7
+// }
+
+//     let uppperString = newString.toUpperCase();
+//     for(i = 0;i < uppperString.length;i++) {
+//         if(alphas[uppperString[i]]) {
+//             console.log(uppperString[i]);
+//             console.log(alphas[uppperString[i]]);
+//             uppperString = uppperString.replace(uppperString[i], alphas[uppperString[i]]);
+//         }
+//     }
+//     console.log(uppperString);
+// }
+
+// leetSpeak("leet");
+
+// longVowels = (newString) => {
+//     var vowels = ["a", "e", "i", "o", "u"];
+//     let string1 ="";
+//     for(i = 0; i < newString.length;i++) {
+//         if(vowels.includes(newString[i])) {
+//             string1 += newString[i].repeat(5);
+//         }
+//     }
+//     console.log(string1);
+// }
+
+// longVowels("aeiou");
+
+sumNumbers = (num) => {
+
+
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    console.log(num.reduce(reducer));
 }
+
+sumNumbers([1,4,8]);
+
+
+

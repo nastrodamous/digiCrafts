@@ -67,7 +67,33 @@
 //         console.log("*".repeat(num));
 //     }
 // }
-// printSquares(5);
+// printSquares(10);
+
+
+// hollowSquare = (num1,num2) => {
+//     for(let i = 1;i <= num1;i++) {
+//         for(let j = 1;j <= num2;j++){
+//             if(i == 1 || j == 1 || i == num1 || j == num2) {
+//                 process.stdout.write("*");
+//             } else {
+//                 process.stdout.write(" ")
+//             }   
+//         }
+//         process.stdout.write("\n")
+//     }
+// }
+
+// hollowSquare(6,4);
+
+// printBanner = (str) => {
+    
+//     process.stdout.write("*".repeat(str.length + 2) + '\n');
+//     console.log(`*${str}*`);
+//     process.stdout.write("*".repeat(str.length + 2) + '\n');
+
+// }
+
+// printBanner("Andre Davis");
 
 // calculateNum = (num) => {
 //     let str = [];
@@ -85,33 +111,35 @@
 
 
 
-// cipher = (message,key) => {
-//     const lowerMessage = message.toLowerCase();
-//     let encodeString = "";
+cipher = (message,key) => {
+    const lowerMessage = message.toLowerCase();
+    let encodeString = "";
     
-//     for(i = 0;i < lowerMessage.length;i++) {
-//         let char = lowerMessage.charCodeAt(i);
+    for(i = 0;i < lowerMessage.length;i++) {
+        let char = lowerMessage.charCodeAt(i);
 
-//     //need to make sure char is between 97 and 122
-//     if (char >= 97 && char <= 97 + 25) 
-//     {   
-        
-//         char -= 97;
-//         char = mod(char + key,26);
-//         char += 97
-//     }
-//     encodeString += String.fromCharCode(char);
+    //need to make sure char is between 97 and 122
+    if (char >= 97 && char <= 97 + 25) 
+    {         
+        char -= 97;
+        char = mod(char + key,26);
+        char += 97
+    }
+    encodeString += String.fromCharCode(char);
 
-// }
-// console.log(encodeString);
-//     }
+}
+console.log(encodeString);
+    }
+
+mod = (n, p) =>
+{
+    //MAKES SURE WE NEVER HIT THE UPPERBOUND OF THE CHARSET
+    return n - p * Math.floor( n / p );
+}
+
+cipher("Test", 13);
 
 
-
-// mod = (n, p) =>
-// {
-//     return n - p * Math.floor( n / p );
-// }
 
 // leetSpeak = (newString) => 
 // {
@@ -151,14 +179,18 @@
 
 // longVowels("aeiou");
 
-sumNumbers = (num) => {
+// sumNumbers = (num) => 
+// {  
+//     const reducer = (firstItem, currentValue) => firstItem + currentValue;
+//     console.log(num.reduce(reducer));
+// }
+
+// sumNumbers([1,4,8]);
 
 
-    const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    console.log(num.reduce(reducer));
-}
 
-sumNumbers([1,4,8]);
+
+
 
 
 

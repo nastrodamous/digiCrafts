@@ -21,3 +21,52 @@
 // numberJoinerFancy(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerFancy(1, 5, '~') --> 1~2~3~4~5
 // numberJoinerFancy(3, 6, '***BANANAS***') --> 1***BANANAS***2***BANANAS***3
+
+
+testWhile = (num1,num2) => {
+  let i = num1;
+  let str =" ";
+  while(i <= num2) {
+    if(i < num2) {
+      str += `${i}_`
+    } else {
+      str += i
+    }
+    i++;
+  }
+  console.log(str);
+}
+
+//testWhile(1,10);
+
+
+testFor = (num1,num2) => {
+  let i = num1;
+  let str = "";
+  for(num1;i <= num2;i++) {
+    if(i < num2) {
+      str += `${i}_`
+    } else {
+      str += i
+    }   
+  }
+  console.log(str)
+}
+
+//testFor(1,5)
+
+fancyJoin = (num1,num2,char = '_') => {
+  let i = num1;
+  let str = "";
+  for(num1;i <= num2;i++) {
+    if(i < num2) {
+      str += `${i}${char}`
+    } else {
+      str += i
+    }   
+  }
+  console.log(str)
+ 
+}
+
+fancyJoin(1,2,'~')

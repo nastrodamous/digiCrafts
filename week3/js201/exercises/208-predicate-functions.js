@@ -52,3 +52,15 @@
 // isCapitalCity('Texas', 'Houston') --> false
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
+
+isEven = (num) => {
+    if(typeof num === 'number' && num % 2 === 0 ) {
+        console.log(true)
+        return true;
+    } else {
+        console.log(false)
+        return false;
+    }
+}
+
+//isEven("dog");

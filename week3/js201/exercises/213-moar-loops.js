@@ -7,7 +7,9 @@ function removeZAnimals () {
 
   // create an empty array (we will fill this with strings from the previous array)
   let animalsWithoutZ = []
-
+  animalsWithoutZ = animals.filter(element => (element.includes('z') === false));
+  console.log(animalsWithoutZ);
+  return animalsWithoutZ;
   // 2) loop through "animals"
 
   // 3) add every item in "animals" to "animalsWithoutZ" unless the animal name
@@ -18,11 +20,23 @@ function removeZAnimals () {
 
 }
 
+//removeZAnimals();
+
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "removeAnyWordWithZ" that takes 1 argument: an array of strings
 // It should return a new array that has all of the items in the passed-in array minus
 // any words that contain the letter 'z' or 'Z' (case-insensitive)
 
+
+removeAnyWordWithZ = (strings) => {
+  let stringsNoZ =  [];
+  const compare = /\z/gi;
+  stringsNoZ = strings.filter(element => !(element.match(compare)))
+  console.log(stringsNoZ);
+}
+//const z = ["zebra","dog","cat","zig","Zag","croc"];
+//removeAnyWordWithZ(z);
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -35,3 +49,12 @@ function removeZAnimals () {
 // Examples:
 // removeWordsWithChar(['aaa', 'bbb', 'ccc'], 'b') --> ['aaa', 'ccc']
 // removeWordsWithChar(['pizza', 'beer', 'cheese'], 'E') --> ['pizza']
+
+removeWordsWithChar = (strings,char) => {
+  let stringsNoZ =  [];
+  const compare = new RegExp(`${char}`,'gi');
+  stringsNoZ = strings.filter(element => !(element.match(compare)))
+  console.log(stringsNoZ);
+}  
+
+//removeWordsWithChar(['aaa', 'bbb', 'ccc'], 'b')

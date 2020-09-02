@@ -52,3 +52,17 @@
 // isCapitalCity('Texas', 'Houston') --> false
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
+
+
+
+isVowel = (char) => {
+  const vowelRegex = '^[aieouAIEOU].*';  
+  if(typeof char === 'string') {
+    let vowelMatch = (char.match(vowelRegex) ? true : false)
+    console.log(vowelMatch); 
+  } else {
+    console.log(false);
+  }
+}
+
+isVowel({e: 'Elephant'})

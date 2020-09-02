@@ -8,8 +8,10 @@
 // *****
 // *****
 
-function makeSquare() {
-    
+function makeSquare(num) {
+        for(let i = 0;i <= num;i++ ) {
+        console.log("*".repeat(num));
+    }
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -22,8 +24,17 @@ function makeSquare() {
 // *    *
 // ******
 
-function makeBox() {
-
+function makeBox(num1,num2) {
+        for(let i = 1;i <= num1;i++) {
+        for(let j = 1;j <= num2;j++){
+            if(i == 1 || j == 1 || i == num1 || j == num2) {
+                process.stdout.write("*");
+            } else {
+                process.stdout.write(" ")
+            }   
+        }
+        process.stdout.write("\n")
+    }
 }
 
 
@@ -35,8 +46,14 @@ function makeBox() {
 // makeBanner('Welcome to DigitalCrafts')
 // ****************************
 // * Welcome to DigitalCrafts *
-// ****************************
+// *************************/ 
+
 
 function makeBanner() {
 
+    process.stdout.write("*".repeat(str.length + 2) + '\n');
+    console.log(`*${str}*`);
+    process.stdout.write("*".repeat(str.length + 2) + '\n');
+
 }
+

@@ -15,3 +15,11 @@
 // Example:
 // > matrixMultiply([[2, 4], [3, 4]], [[5, 2], [3, 1]])
 // [ [22,  8], [27, 10] ]
+
+matrixMultiply= (num) =>
+ {
+     const reducer = (mul, current) =>mul* current;
+     console.log(num.reduce(reducer));
+ }
+
+matrixMultiply([[2, 4], [3, 4]], [[5, 2], [3, 1]])

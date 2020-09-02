@@ -19,3 +19,31 @@
 // 'attack at dawn!'
 // > decipher('ehz czlod otgpcrpo ty l hzzo', 11)
 // 'two roads diverged in a wood'
+
+cipher = (message,key) => {
+    const lowerMessage = message.toLowerCase();
+    let encodeString = "";
+    
+    for(i = 0;i < lowerMessage.length;i++) {
+        let char = lowerMessage.charCodeAt(i);
+
+    //need to make sure char is between 97 and 122
+    if (char >= 97 && char <= 97 + 25) 
+    {         
+        char -= 97;
+        char = mod(char + key,26);
+        char += 97
+    }
+    encodeString += String.fromCharCode(char);
+
+}
+console.log(encodeString);
+    }
+
+mod = (n, p) =>
+{
+    //MAKES SURE WE NEVER HIT THE UPPERBOUND OF THE CHARSET
+    return n - p * Math.floor( n / p );
+}
+
+cipher("Test", 13);

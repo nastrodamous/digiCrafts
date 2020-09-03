@@ -64,3 +64,16 @@ isEven = (num) => {
 }
 
 //isEven("dog");
+
+
+isVowel = (char) => {
+  const vowelRegex = '^[aieouAIEOU].*';  
+  if(typeof char === 'string') {
+    let vowelMatch = (char.match(vowelRegex) ? true : false)
+    console.log(vowelMatch); 
+  } else {
+    console.log(false);
+  }
+}
+
+isVowel({e: 'Elephant'})

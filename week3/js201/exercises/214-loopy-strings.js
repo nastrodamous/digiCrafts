@@ -8,6 +8,12 @@
 // Example:
 // reverse("skoob") --> "books"
 
+reverse = (reverseStr) => {
+     console.log(reverseStr.split('').reverse().join(''));
+}
+
+//reverse("skoob")
+
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -17,6 +23,15 @@
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
+
+
+findLongestWord = (longestString) => {
+     const words = longestString.split(' '); 
+     const reducer = (a,b) => (a.length >= b.length ? a : b);
+     console.log(words.reduce(reducer));
+}
+
+//findLongestWord('a book full of dogs');
 
 
 
@@ -29,6 +44,24 @@
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
 
+nicer = (message) => {
+
+    const badWords = [
+        "heck",
+        "darn",
+        "dang",
+        "crappy"
+    ]
+
+    //regex adds the worlds from the badwords array
+    var rgx = new RegExp(badWords.join("|"),"gi")
+    //regex removes multiple spaces and replaces with a single space.
+    message = message.replace(rgx,"").replace(/\s\s+/g," ");
+    console.log(message)
+}
+
+//nicer('mom get the heck in here and bring me a darn sandwich.')
+
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -39,6 +72,9 @@
 // Examples:
 // capitalizeAll('hello world') --> 'Hello World'
 // capitalizeAll('every day is like sunday') --> 'Every Day Is Like Sunday'
+const capitalizeAll = words => words.split(' ').map( x =>  x.substring(0,1).toUpperCase()+ x.substring(1)).join(' ')
+//console.log(capitalizeAll('hello world'))
+
 
 
 
@@ -49,6 +85,29 @@
 // .split() and write your own.
 //
 // Examples:
-// split('a-b-c', '-') --> ['a', 'b', 'c']
-// split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
-// split('xyz', 'r') --> ['xyz']
+// split('a-b-c', '-')
+// split('APPLExxBANANAxxCHERRY', 'xx')
+// split('xyz', 'r') 
+
+split  = (string,delimeter) => {
+    let stringArray = [''];
+    let j = 0;
+
+    for(let i = 0; i < string.length;i++) {
+        if (string.charAt(i) == delimeter && delimeter.length == 1) {
+            j++;
+            stringArray.push('');
+        } else if(string.substr(i,delimeter.length) == delimeter) {
+                i += delimeter.length - 1;
+                j++;
+                stringArray.push('');
+        } else {
+            stringArray[j] += string.charAt(i)
+        }
+    }
+    console.log(stringArray);
+}
+
+split('a-b-c', '-')
+split('APPLExxBANANAxxCHERRY', 'xx')
+split('xyz', 'r') 

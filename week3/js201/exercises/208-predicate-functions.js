@@ -65,6 +65,16 @@ isEven = (num) => {
 
 //isEven("dog");
 
+isOdd = (num) => {
+  if(typeof num === 'number' && num % 2 === 1 ) {
+      console.log(true)
+      return true;
+  } else {
+      console.log(false)
+      return false;
+  }
+}
+
 
 isVowel = (char) => {
   const vowelRegex = '^[aieouAIEOU].*';  

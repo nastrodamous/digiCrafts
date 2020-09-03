@@ -8,6 +8,12 @@
 // alphaSort(['b', 'a', 'c'])
 // > ['a', 'b', 'c']
 
+alphaSort = (sortAlpha) => {
+    console.log(sortAlpha.sort());
+}
+
+//alphaSort(['b', 'a', 'c'])
+
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -17,6 +23,13 @@
 // Examples:
 // strLengthSort(['Apple', 'Banana', 'Cherry'])
 // > ['Apple', 'Cherry', 'Banana']
+
+strLengthSort = (sortLength) => {
+    sortLength.sort((a,b) => a.length - b.length)
+    console.log(sortLength)
+}
+
+strLengthSort(['Apple', 'Banana', 'Cherry'])
 
 
 
@@ -38,3 +51,11 @@
 //   [4, 5]
 // ])
 // > [[2], [4, 5], [9, 1, 9]]
+
+
+sumSort = (sortArr) => {
+   let sum = (el) => el.reduce((a,b) => a + b);
+   sortArr.sort((a,b) => sum(a) - sum(b));
+   console.log(arr);
+}
+

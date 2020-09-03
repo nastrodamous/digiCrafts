@@ -9,3 +9,33 @@
 // Examples:
 // fizzbuzz(3) --> '..fizz'
 // fizzbuzz(15) --> '..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz'
+
+fizzbuzz = (num) => {
+    let i = 1;
+    let str = "";
+    const fizz = "fizz"
+    const buzz = "buzz"
+
+    while(i <= num) {
+        if(i % 3 !== 0 && i % 5 !== 0) {
+            str += ".";
+        }
+
+        else if (i % 3 === 0 && i % 5 === 0) {
+            str += fizz + buzz;
+        }
+        else if(i % 3 === 0) {
+            str += fizz
+        }
+        
+        else if(i % 5 === 0) {
+            str += buzz
+
+        }
+
+        i++;
+    }
+    console.log(str);
+}
+
+fizzbuzz(15);

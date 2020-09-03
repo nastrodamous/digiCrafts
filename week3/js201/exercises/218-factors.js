@@ -7,6 +7,21 @@
 // gcd(3, 15) --> 3
 // gcd(50, 20) --> 10
 
+gcd = (num1,num2) => {
+
+    let a = Math.abs(num1);
+    let b = Math.abs(num2);
+    let temp = 0;
+    while(b) {
+      temp = b;
+      b = a % b;
+      a = temp;
+    }
+    return a;
+  }
+
+  //console.log(gcd(50, 20))
+
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -19,3 +34,14 @@
 // factors(12) --> [1, 2, 3, 4, 6, 12]
 // factors(42) --> [1, 2, 3, 6, 7, 14, 21, 42]
 
+factors =  (num) => {
+    let factors = [];
+    for(let i = 1; i <= num;i++){
+        if(num % i === 0) {
+            factors.push(i);
+        }
+    }
+    console.log(factors);
+}
+
+factors(12)

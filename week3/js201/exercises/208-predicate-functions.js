@@ -77,7 +77,7 @@ isOdd = (num) => {
 
 
 isVowel = (char) => {
-  const vowelRegex = '^[aieouAIEOU].*';  
+  const vowelRegex = '^[aieou].gi';  
   if(typeof char === 'string') {
     let vowelMatch = (char.match(vowelRegex) ? true : false)
     console.log(vowelMatch); 

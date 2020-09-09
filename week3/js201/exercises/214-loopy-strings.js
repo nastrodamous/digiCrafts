@@ -108,6 +108,6 @@ split  = (string,delimeter) => {
     console.log(stringArray);
 }
 
-split('a-b-c', '-')
+//split('a-b-c', '-')
 split('APPLExxBANANAxxCHERRY', 'xx')
-split('xyz', 'r') 
+//split('xyz', 'r') 

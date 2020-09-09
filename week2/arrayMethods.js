@@ -55,25 +55,25 @@
 
 // console.log(newArr)
 
-// var arr = [
-//     [1, 3, 4],
-//     [2, 4, 6, 8],
-//     [3, 6]
-//   ];
+//  var arr = [
+//      [1, 3, 4],
+//      [2, 4, 6, 8],
+//      [3, 6]
+//    ];
 
-//   let sum = (el) => el.reduce((a,b) => a + b);
-//   arr.sort((a,b) => sum(a) - sum(b));
-//   console.log(arr);
+//    let sum = (el) => el.reduce((a,b) => a + b);
+//    arr.sort((a,b) => sum(a) - sum(b));
+//    console.log(arr);
 
-// function call3Times(fun) {
-//     fun();
-//     fun();
-//     fun();
-//   }
+//  function call3Times(fun) {
+//      fun();
+//      fun();
+//      fun();
+//    }
 
-//   helloWorld = () => {
-//     console.log("Hello World");
-//   }
+//    helloWorld = () => {
+//      console.log("Hello World");
+//    }
 
 //   callntimes = (fun,times) => {
 //       for(i = 0; i < times;i++)
@@ -90,8 +90,8 @@
 
 //  sumNumbers([1,2,3]);
 
-acronym = (arr) => {
-        console.log(arr.reduce((current, char) => current + char[0], ""));
-    }
+// acronym = (arr) => {
+//         console.log(arr.reduce((current, char) => current + char[0], ""));
+//     }
     
-    acronym(['very', 'important', 'person'])
+//     acronym(['very', 'important', 'person'])         
